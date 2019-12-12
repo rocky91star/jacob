@@ -1,0 +1,146 @@
+{
+    "Employees" : [
+    {
+        "name": "Usain Bolt",
+        "ID": "OMNI10001",
+        "age": 27,
+        "salary": 70000,
+         "Project": "Athletics",
+         "DOJ":  "21-9-2018",
+         "experience": "6 years",
+         "Blood group": "B+ve"         
+
+    },
+    {
+        "name": "Virat Kohli",
+        "age": 28,
+        "salary": 65000,
+        "ID": "OMNI10002",
+         "Project": "Cricket",
+         "DOJ":  "18-3-2019",
+         "experience": "8 years",
+         "Blood group": "AB+ve"
+    }, 
+    {
+        "name": "Ronaldo",
+        "ID": "OMNI10003",
+        "age": 30,
+        "salary": 90000,
+         "Project": "Football",
+         "DOJ":  "10-5-2017",
+         "experience": "10 years",
+         "Blood group": "O-ve"  
+    },
+    {
+        "name": "Messi",
+        "ID": "OMNI10004",
+        "age": 31,
+        "salary": 85000,
+         "Project": "Football",
+         "DOJ":  "15-7-2019",
+         "experience": "9 years",
+         "Blood group": "O+ve" 
+    },     
+    {
+        "name": "Mofarah",
+        "ID": "OMNI10005",
+        "age": 29,
+        "salary": 50000,
+         "Project": "Athletics",
+         "DOJ":  "29-7-2019",
+         "experience": "10 years",
+         "Blood group": "AB+ve" 
+    },      
+    {
+        "name": "Gandhi",
+        "ID": "OMNI10006",
+        "age": 59,
+        "salary": 185000,
+         "Project": "Politics",
+         "DOJ":  "19-9-2015",
+         "experience": "15 years",
+         "Blood group": "B-ve" 
+    },      
+    {
+        "name": "MaryKom",
+        "ID": "OMNI10007",
+        "age": 31,
+        "salary": 85000,
+         "Project": "Boxing",
+         "DOJ":  "9-2-2011",
+         "experience": "19 years",
+         "Blood group": "O-ve" 
+    },
+    {
+        "name": "Mortal",
+        "ID": "OMNI10008",
+        "age": 24,
+        "salary": 285000,
+         "Project": "Pubg",
+         "DOJ":  "11-5-2017",
+         "experience": "3 years",
+         "Blood group": "A-ve" 
+    },      
+    {
+        "name": "Priyanka",
+        "ID": "OMNI10009",
+        "age": 28,
+        "salary": 99000,
+         "Project": "Actor",
+         "DOJ":  "25-6-2010",
+         "experience": "9 years",
+         "Blood group": "O+ve" 
+    },      
+    {
+        "name": "Gerrard",
+        "ID": "OMNI10010",
+        "age": 35,
+        "salary": 585000,
+         "Project": "football",
+         "DOJ":  "30-1-2004",
+         "experience": "22 years",
+         "Blood group": "O+ve" 
+    },      
+    {
+        "name": "Dhoni",
+        "ID": "OMNI10011",
+        "age": 37,
+        "salary": 368000,
+         "Project": "Cricket",
+         "DOJ":  "7-7-2003",
+         "experience": "16 years",
+         "Blood group": "B+ve" 
+    },      
+    {
+        "name": "Davinci",
+        "ID": "OMNI10012",
+        "age": 55,
+        "salary": 124000,
+         "Project": "Artist",
+         "DOJ":  "12-11-1995",
+         "experience": "29 years",
+         "Blood group": "O-ve" 
+    },      
+    {
+        "name": "Federer",
+        "ID": "OMNI10013",
+        "age": 38,
+        "salary": 50000,
+         "Project": "Tennis",
+         "DOJ":  "25-8-2002",
+         "experience": "19 years",
+         "Blood group": "O+ve" 
+    },      
+    {
+        "name": "Netaji",
+        "ID": "OMNI10014",
+        "age": 41,
+        "salary": 75000,
+         "Project": "Politics",
+         "DOJ":  "6-10-1997",
+         "experience": "14 years",
+         "Blood group": "B+ve" 
+    }      
+    
+]
+}
