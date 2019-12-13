@@ -19,39 +19,39 @@ function read(){
              console.log('Error in fs',err);
          } else {
            
-            return jsontring;
+            return (JSON.parse(jsontring));
          }
      })
  };
  
  app.get('/employees',(req,res)=>{
-    var result= JSON.parse(read());
-   let task = req.query.remove;
-   
-    var EmployeesIds = result.Employees.map(function({ID,...rest}){  
-        return {EmployeeId:ID,...rest}
-        }
-    );
-    res.json(EmployeesIds);
- }
- );
+
+    const details= read();
+    let employeesIds = details.employees.map(function({id,...rest}){  
+         return {employeeId:id,...rest}
+    });
+    
+    res.json(employeesIds);
+ });
 
 
  app.get('/employee',(req,res)=>{
-    var result1 = JSON.parse(read());
-    var project1 = req.query.project;
-    const final= result1.Employees.filter(Employees =>  Employees.Project === project1);
-    res.send(final);
+
+    const filtr = read();
+    let project1 = req.query.project;
+    const final= filtr.employees.filter(employees =>  employees.project === project1);
+          res.send(final);
+
  });
 
 
  app.get('/employee/ctc',(req,res) =>{
 
-  var result2 = JSON.parse(read());
-  
-  var total= result2.Employees.reduce(function (acc, {salary}) {
-    return acc + salary;
+    const ctc = read();
+    let total= ctc.employees.reduce(function (acc, {salary}) {
+         return acc + salary;
    }, 0);
-    res.json(total);
+
+   res.json(total);
         
 });

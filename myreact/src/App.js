@@ -1,11 +1,11 @@
 import React from 'react';
-import FunctionalComponent from './components/FunctionalComponent.js'
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (
     <div>
      
-     <FunctionalComponent />
+     <Dashboard />
 
     </div>
   );

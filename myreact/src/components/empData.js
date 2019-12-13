@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import ReactTable from 'react-table'
 import 'react-table/react-table.css'
-import '../components/mystyle.css'
 import Logo from '../components/Clogo.png'
 
 class empData extends Component {
@@ -20,7 +19,6 @@ class empData extends Component {
         axios.get("http://localhost:7000/employees")
             .then(response => {
                 this.setState({ employeesDetails: response.data })
-                console.log(response.data)
             })
             .catch(error => {
                 console.log(error)
@@ -29,7 +27,6 @@ class empData extends Component {
         axios.get("http://localhost:7000/employee/ctc")
             .then(responsectc => {
                 this.setState({ Totalctc: responsectc.data })
-                console.log(responsectc.data)
             })
             .catch(error => {
                 console.log(error)
@@ -41,7 +38,7 @@ class empData extends Component {
         const columns = [ 
             {
                 Header: "EmployeeID",
-                accessor: "EmployeeId",
+                accessor: "employeeId",
                 style: {
                     textAlign: 'center',
                 }
@@ -55,7 +52,7 @@ class empData extends Component {
             },
             {
                 Header: "Project",
-                accessor: "Project",
+                accessor: "project",
                 style: {
                     textAlign: 'center'
                 }
@@ -76,14 +73,14 @@ class empData extends Component {
             },
             {
                 Header: "DateofJoining",
-                accessor: "DOJ",
+                accessor: "doj",
                 style: {
                     textAlign: 'center'
                 }
             },
             {
                 Header: "Blood Group",
-                accessor: "Blood group",
+                accessor: "bloodGroup",
                 style: {
                     textAlign: 'center'
                 }
@@ -108,69 +105,70 @@ class empData extends Component {
             }
         ]
 
-        return (
+    return (
             <div>
-    <div style={{ display: 'flex',
-                 justifyContent: "space-between", 
-                 maxWidth: '100',
-                 maxHeight: '100',
-                 padding: '20px',
-                 backgroundColor: '#fefefe' }}>
+                   <div style={
+                          { display: 'flex',
+                            justifyContent: "space-between", 
+                            maxWidth: '100',
+                            maxHeight: '100',
+                            padding: '20px',
+                            backgroundColor: '#fefefe' }}>
 
                     <img src={Logo} alt={Logo} maxWidth='30px' />
 
-    </div>
-                
+                   </div>
                 
                 <div class="container-fluid" >
                     
                     <div style={
-                        {display:'flex',
-                                 justifyContent:"space-between",
-                                 margin:'10px'}
+                        {        
+                        display:'flex',
+                        justifyContent:"space-between",
+                        margin:'10px'}
                             }>
 
-                            <div style={
-                                {maxWidth:'100',
-                                 fontSize:'2vw',
-                                 color:'red'}
-                                 }>Employee List</div>
+                    <div style={
+                        {
+                        maxWidth:'100',
+                        fontSize:'2vw',
+                        color:'red'
+                        }
+                        }>Employee List</div>
         
-        <div style= {
-                     {
+                    <div style= {
+                        {
                         background:'linear-gradient(to right, #f0f0f0 50%, blue 50%)',
                         textAlign:'center',
                         maxWidth:'100',
                         border:'1px solid blue',
                         borderRadius:'35px',
                         padding:'10px',
-                                   }
+                        }
                     }>
             
-<span style={
-    {color: 'blue',
-    fontSize:'16px',
-    padding:'5px 24px',
-     borderRadius: '35px'
-}
+                    <span style={
+                           {
+                           color: 'blue',
+                           fontSize:'16px',
+                           padding:'5px 24px',
+                           borderRadius: '35px'
+                           }
 
-    }
->
-        Total CTC
-</span>
-
-
-<span style={
-    {color:'white',fontSize:'16px',padding:'5px 24px', borderRadius: '35px'}
-    }
-    >{this.state.Totalctc}/-
-</span>
-        </div>
+                           }>Total CTC</span>
+                    <span style={
+                            {
+                            color:'white',
+                            fontSize:'16px',
+                            padding:'5px 24px', 
+                            borderRadius: '35px'}
+                            }>{this.state.Totalctc}/-</span>
+                            </div>
                         </div>
                     
-
-                    
-                        <ReactTable columns={columns} data={this.state.employeesDetails} defaultPageSize={10}></ReactTable>
+                        <ReactTable columns={columns} 
+                                    data={this.state.employeesDetails} 
+                                    defaultPageSize={10}></ReactTable>
                 </div>
 
             </div>
