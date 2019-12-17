@@ -4,7 +4,7 @@ import Table from '../components/Table.js'
 const DashboardComponent = ()=> {
 
     const [employees, setEmployees] = useState({});
-    const [total, settotal] = useState({});
+    const [total, setTotal] = useState({});
     const [isError, setErrors] = useState(false)
     
     useEffect(() => {
@@ -19,7 +19,7 @@ const DashboardComponent = ()=> {
               .catch(err => setErrors(err));
             resCtc
               .json()
-              .then(resCtc => settotal({totalCtc: resCtc}))
+              .then(resCtc => setTotal({totalCtc: resCtc}))
               .catch(err => setErrors(err));
         
         }
