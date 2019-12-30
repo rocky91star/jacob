@@ -7,15 +7,16 @@ exports.create = (req, res) => {
         });
     }
 
-    name = req.body.name;
-    id = req.body.id;
-    age = req.body.age;
-    salary = req.body.salary;
-    project = req.body.project;
-    doj = req.body.doj;
-    experience = req.body.experience;
-    bloodGroup = req.body.bloodGroup;
-
+    {
+        name = req.body.name;
+        id = req.body.id;
+        age = req.body.age;
+        salary = req.body.salary;
+        project = req.body.project;
+        doj = req.body.doj;
+        experience = req.body.experience;
+        bloodGroup = req.body.bloodGroup;
+    }
     const employees = new Employees({ name, id, age, salary, project, doj, experience, bloodGroup });
     employees.save()
         .then(data => {
@@ -39,7 +40,7 @@ exports.findAll = (req, res) => {
 };
 
 exports.findOne = (req, res) => {
-    const id = req.params.employeeId;
+    const {employeeId:id} = req.params
     Employees.findOne({ id })
         .then(employees => {
             if (!employees) {
@@ -96,7 +97,7 @@ exports.update = (req, res) => {
 };
 
 exports.delete = (req, res) => {
-    const id = req.params.employeeId;
+    const {employeeId:id} = req.params;
     Employees.findOneAndDelete({ id })
         .then(employees => {
             if (!employees) {
